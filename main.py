@@ -26,12 +26,12 @@ while game_active:
     scoreboard.clear()
     states_remaining = 50 - len(answer_bank)
     scoreboard.write(f"{states_remaining} States Remaining", False, align="center", font=("Arial", 20, "normal"))
-    if len(answer_bank) == 5:
+    if len(answer_bank) == 50:
         game_active = False
         scoreboard.clear()
         scoreboard.write(f"YOU DID IT!", False, align="center", font=("Arial", 20, "normal"))
     else:
-        answer = screen.textinput(title="Guess the State", prompt="Name a state: ").capitalize()
+        answer = screen.textinput(title="Guess the State", prompt="Name a state: ").title()
         if data["state"].str.contains(answer).any():
             if answer in answer_bank:
                 pass
