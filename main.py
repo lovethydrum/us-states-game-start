@@ -32,7 +32,9 @@ while game_active:
         scoreboard.write(f"YOU DID IT!", False, align="center", font=("Arial", 20, "normal"))
     else:
         answer = screen.textinput(title="Guess the State", prompt="Name a state: ").title()
-        if data["state"].str.contains(answer).any():
+        if answer == "":
+            pass
+        elif data["state"].str.contains(answer).any():
             if answer in answer_bank:
                 pass
             else:
