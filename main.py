@@ -3,6 +3,7 @@ from state_name_generator import Text_generator
 import pandas
 from scoreboard import Scoreboard
 
+#initiate the screen
 screen = turtle.Screen()
 screen.title("U.S. States Game")
 image ="blank_states_img.gif"
